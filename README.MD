@@ -1,15 +1,4 @@
-dotnet new xunit -o webapp.Tests
+# Unit Testing and Razor Pages
 
-dotnet tool install --global dotnet-aspnet-codegenerator
-
-dotnet aspnet-codegenerator razorpage -m Student -dc webapp.Data.RazorClubContext -udl -outDir Pages/Students --referenceScriptLibraries -sqlite
-
-
-dotnet add package Microsoft.EntityFrameworkCore.SQLite
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-dotnet add package Microsoft.EntityFrameworkCore.Design
-dotnet add package Microsoft.EntityFrameworkCore.Tools
-dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
-dotnet add package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
-
-dotnet add package Microsoft.EntityFrameworkCore.InMemory
+* [Razor Pages unit tests in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/test/razor-pages-tests?view=aspnetcore-6.0)
+* [Unit testing C# in .NET Core using dotnet test and xUnit](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test)
