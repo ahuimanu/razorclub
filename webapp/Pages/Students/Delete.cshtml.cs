@@ -46,13 +46,7 @@ namespace webapp.Pages_Students
                 return NotFound();
             }
 
-            Student = await _context.Student.FindAsync(id);
-
-            if (Student != null)
-            {
-                _context.Student.Remove(Student);
-                await _context.SaveChangesAsync();
-            }
+            await _context.DeleteStudentAsync(id);
 
             return RedirectToPage("./Index");
         }

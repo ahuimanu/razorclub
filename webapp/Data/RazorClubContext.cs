@@ -22,5 +22,16 @@ namespace webapp.Data
             await Student.AddAsync(student);
             await SaveChangesAsync();
         }
+
+        public async virtual Task DeleteStudentAsync(int? id)
+        {
+            Student student = await Student.FindAsync(id);            
+
+            if (student != null)
+            {
+                Student.Remove(student);
+                await SaveChangesAsync();
+            }
+        }
     }
 }
